@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9DE615">
+
+    <!-- SearchView for the location search -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/searchview_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Location" />
+
+    <!-- Button Layout -->
+
+    <!-- Google Map Fragment -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_layout"
+        android:layout_marginTop="-57dp" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_location"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Work Button -->
+        <Button
+            android:id="@+id/btn_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FEFEFE"
+            android:drawableStart="@drawable/suitcase"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="Work"
+            android:textColor="#474747"
+            android:textStyle="bold"
+            app:strokeColor="#000000"
+            app:strokeWidth="1.5dp" />
+
+        <!-- Home Button -->
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FEFEFE"
+            android:drawableStart="@drawable/home"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="Home"
+            android:textColor="#474747"
+            android:textStyle="bold"
+            app:strokeColor="#000000"
+            app:strokeWidth="1.5dp" />
+
+        <!-- Other Button -->
+        <Button
+            android:id="@+id/btn_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FEFEFE"
+            android:drawableStart="@drawable/pin"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="Other"
+            android:textColor="#474747"
+            android:textStyle="bold"
+            app:strokeColor="#000000"
+            app:strokeWidth="1.5dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Save Location"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+
+</RelativeLayout>

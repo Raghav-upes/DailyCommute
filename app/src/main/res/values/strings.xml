@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DailyCommute</string>
+    <string name="google_maps_key"> USE Google Maps API Key</string>
+</resources>
